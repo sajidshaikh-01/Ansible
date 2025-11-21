@@ -1,0 +1,10 @@
+- name: Run job every 10 min
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: test cron
+      cron:
+        name: "ping google"
+        minute: "*/10"
+        job: "ping -c1 google.com >> /tmp/ping.log"
