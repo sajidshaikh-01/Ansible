@@ -1,0 +1,10 @@
+- name: Create user with home and bash shell
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Create user appuser
+      user:
+        name: appuser
+        shell: /bin/bash
+        create_home: yes
