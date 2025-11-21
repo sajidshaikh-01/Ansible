@@ -1,0 +1,9 @@
+- name: Create user on remote server
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Create a new user called devuser
+      user:
+        name: devuser
+        state: present
