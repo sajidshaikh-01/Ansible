@@ -1,0 +1,10 @@
+- name: Delete user
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Remove devuser and delete home folder
+      user:
+        name: devuser
+        state: absent
+        remove: yes
