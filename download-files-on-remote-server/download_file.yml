@@ -1,0 +1,9 @@
+- name: Download file on remote server
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Download sample file
+      get_url:
+        url: https://example.com/file.zip
+        dest: /tmp/file.zip
