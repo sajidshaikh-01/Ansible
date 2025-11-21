@@ -1,0 +1,9 @@
+- name: Change file permissions
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Change permission of myfile
+      file:
+        path: /tmp/myfile.txt
+        mode: '0644'
