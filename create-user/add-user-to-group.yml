@@ -1,0 +1,10 @@
+- name: Add user to sudo group
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Create devops user and add to sudo group
+      user:
+        name: devops
+        groups: sudo
+        append: yes
