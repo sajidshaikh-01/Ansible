@@ -1,0 +1,9 @@
+- name: Delete a file
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Remove the test file
+      file:
+        path: /tmp/myfile.txt
+        state: absent
