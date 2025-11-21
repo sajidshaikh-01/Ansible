@@ -1,0 +1,12 @@
+- name: Copy file to remote server
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Copy index.html to /var/www/html/
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: '0644'
