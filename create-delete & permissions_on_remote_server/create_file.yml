@@ -1,0 +1,9 @@
+- name: Create a file on remote server
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Create file
+      file:
+        path: /tmp/myfile.txt
+        state: touch
