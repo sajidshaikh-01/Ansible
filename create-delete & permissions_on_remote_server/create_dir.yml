@@ -1,0 +1,10 @@
+- name: Create a directory
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Create /opt/myapp directory
+      file:
+        path: /opt/myapp
+        state: directory
+        mode: '0755'
