@@ -1,0 +1,11 @@
+- name: Change owner and group
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Change owner of directory
+      file:
+        path: /opt/myapp
+        owner: ubuntu
+        group: ubuntu
+        state: directory
