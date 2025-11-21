@@ -1,0 +1,17 @@
+- name: Create production user
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Create devops user
+      user:
+        name: devops
+        shell: /bin/bash
+        create_home: yes
+        groups: sudo
+        append: yes
+
+    - name: Add authorized key
+      authorized_key:
+        user: devops
+        key: "{{ lookup('file', 'devops.pub') }}"
