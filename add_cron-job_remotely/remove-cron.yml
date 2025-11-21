@@ -1,0 +1,9 @@
+- name: Remove cron job
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Delete backup cron
+      cron:
+        name: "Daily backup"
+        state: absent
