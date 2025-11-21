@@ -1,0 +1,10 @@
+- name: Download file with permissions
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Download script
+      get_url:
+        url: https://example.com/install.sh
+        dest: /usr/local/bin/install.sh
+        mode: '0755'
