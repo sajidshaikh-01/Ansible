@@ -1,0 +1,9 @@
+- name: Delete directory
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Remove /opt/myapp directory
+      file:
+        path: /opt/myapp
+        state: absent
