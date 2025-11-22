@@ -1,0 +1,4 @@
+- name: Create users
+  user:
+    name: devops
+  when: create_users | bool
