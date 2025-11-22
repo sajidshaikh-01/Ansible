@@ -1,0 +1,5 @@
+- name: Restart service if port is 80
+  service:
+    name: nginx
+    state: restarted
+  when: server_port == 80
