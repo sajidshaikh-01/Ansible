@@ -1,0 +1,20 @@
+- name: Create users and setup sudo
+  hosts: all
+
+  tasks:
+    - name: Create users
+      user:
+        name: "{{ item.name }}"
+        groups: "{{ item.group }}"
+      loop:
+        - { name: "dev", group: "developers" }
+        - { name: "qa", group: "qa-team" }
+
+    - name: Add sudo access
+      lineinfile:
+        path: /etc/sudoers
+        line: "{{ item.name }} ALL=(ALL) NOPASSWD: ALL"
+        state: present
+      loop:
+        - { name: "dev" }
+        - { name: "qa" }
