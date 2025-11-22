@@ -1,0 +1,9 @@
+- name: Install nginx as root
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Install nginx package
+      apt:
+        name: nginx
+        state: present
