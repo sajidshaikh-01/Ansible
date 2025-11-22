@@ -1,0 +1,10 @@
+- name: Run task as root using different user
+  hosts: web
+  become: yes
+  become_user: root
+
+  tasks:
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted
