@@ -1,3 +1,5 @@
+Where Can You Define Variables?
+
 | Type | Location                  | Priority |
 | ---- | ------------------------- | -------- |
 | 1    | Command line              | Highest  |
