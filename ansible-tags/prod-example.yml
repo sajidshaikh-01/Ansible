@@ -1,0 +1,18 @@
+tasks:
+  - name: Pull source code
+    git:
+      repo: https://github.com/myapp.git
+      dest: /opt/myapp
+    tags: deploy
+
+  - name: Copy config file
+    template:
+      src: config.j2
+      dest: /opt/myapp/config.yml
+    tags: config
+
+  - name: Restart app
+    service:
+      name: myapp
+      state: restarted
+    tags: restart
