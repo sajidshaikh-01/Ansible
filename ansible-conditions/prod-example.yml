@@ -1,0 +1,21 @@
+---
+- name: Install WebServer based on OS
+  hosts: all
+
+  tasks:
+    - name: Install Apache on Debian
+      apt:
+        name: apache2
+        state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Install httpd on RedHat
+      yum:
+        name: httpd
+        state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: Start service
+      service:
+        name: "{{ 'apache2' if ansible_os_family == 'Debian' else 'httpd' }}"
+        state: started
