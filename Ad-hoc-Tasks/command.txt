@@ -1,0 +1,31 @@
+Format of an Ad-hoc Command
+ansible -i inventory <host/group> -m <module> -a "<arguments>"
+
+
+
+1. Test Connection to Remote Servers
+ansible -i inventory web -m ping
+
+
+2. Run Shell Command on Remote Server
+ansible -i inventory all -m shell -a "uptime"
+
+
+3. Install a Package (without playbook)
+ansible -i inventory web -b -m apt -a "name=nginx state=present"
+
+
+4. Start / Stop / Restart a Service
+ansible -i inventory web -b -m service -a "name=nginx state=started"
+
+
+5. Copy File to Remote Server (ad-hoc)
+ansible -i inventory web -b -m copy -a "src=index.html dest=/var/www/html/index.html"
+
+
+6. Create a File or Directory
+ansible -i inventory web -b -m file -a "path=/tmp/testfile state=touch"
+
+
+7. Delete a File or Directory
+ansible -i inventory web -b -m file -a "path=/tmp/testfile state=absent"
