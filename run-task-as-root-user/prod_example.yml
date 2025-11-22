@@ -1,0 +1,17 @@
+- name: Update packages and restart services
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Update APT cache
+      apt:
+        update_cache: yes
+
+    - name: Upgrade packages
+      apt:
+        upgrade: yes
+
+    - name: Restart SSH service
+      service:
+        name: ssh
+        state: restarted
