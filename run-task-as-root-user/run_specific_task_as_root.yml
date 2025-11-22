@@ -1,0 +1,14 @@
+- name: Create folder without sudo, install package with sudo
+  hosts: web
+
+  tasks:
+    - name: Create folder without root
+      file:
+        path: /tmp/test
+        state: directory
+
+    - name: Install tree package as root
+      become: yes
+      apt:
+        name: tree
+        state: present
