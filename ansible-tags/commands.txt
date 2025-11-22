@@ -1,0 +1,14 @@
+Run only install task:
+ansible-playbook -i inventory webserver.yml --tags install
+
+
+Run only copy task:
+ansible-playbook -i inventory webserver.yml --tags copy
+
+
+Run only restart task:
+ansible-playbook -i inventory webserver.yml --tags restart
+
+
+Run multiple tags together
+ansible-playbook -i inventory webserver.yml --tags "copy,restart"
