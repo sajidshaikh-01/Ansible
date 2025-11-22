@@ -1,0 +1,7 @@
+- name: Create users with UID
+  user:
+    name: "{{ item.name }}"
+    uid: "{{ item.uid }}"
+  loop:
+    - { name: "john", uid: 1010 }
+    - { name: "mike", uid: 1011 }
