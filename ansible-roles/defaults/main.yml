@@ -1,0 +1,3 @@
+---
+website_title: "My Ansible Nginx Site"
+website_message: "Deployed using Ansible Role on EC2 servers!"
