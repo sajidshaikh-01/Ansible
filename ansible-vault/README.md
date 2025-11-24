@@ -36,6 +36,7 @@ playbooks/launch_ec2.yml
 
 
 Step 5 — Run the playbook
+
 ansible-playbook -i inventory.ini playbooks/launch_ec2.yml --ask-vault-pass
 
 
