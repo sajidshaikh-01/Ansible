@@ -77,7 +77,7 @@ Changes can be made in one place and applied consistently wherever the role is u
 
 ### Readability
 Roles make playbooks cleaner and easier to read by abstracting away the details into logically
-named roles.
+named roles
 
 ### Collaboration
 Roles facilitate collaboration among team members by allowing them to work on different parts
