@@ -73,7 +73,7 @@ and effort in writing redundant code.
 
 ### Maintainability
 By organizing related tasks into roles, it becomes easier to manage and maintain the code. 
-Changes can be made in one place and applied consistently wherever the role is used.
+Changes can be made in one place and applied consistently wherever the role is used
 
 ### Readability
 Roles make playbooks cleaner and easier to read by abstracting away the details into logically
