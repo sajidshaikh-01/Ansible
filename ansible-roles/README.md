@@ -61,10 +61,11 @@ An Ansible role follows a specific directory structure:
       └── main.yml
 ```
 
+
 ## Why Use Ansible Roles?
 
 ### Modularity
-Roles allow you to break down complex playbooks into smaller, reusable components. 
+Roles allow you to break down complex playbooks into smaller, reusable components
 Each role handles a specific part of the configuration or setup
 
 ### Reusability
