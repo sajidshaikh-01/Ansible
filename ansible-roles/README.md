@@ -65,11 +65,11 @@ An Ansible role follows a specific directory structure:
 
 ### Modularity
 Roles allow you to break down complex playbooks into smaller, reusable components. 
-Each role handles a specific part of the configuration or setup.
+Each role handles a specific part of the configuration or setup
 
 ### Reusability
 Once created, roles can be reused across different playbooks and projects. This saves time 
-and effort in writing redundant code.
+and effort in writing redundant code
 
 ### Maintainability
 By organizing related tasks into roles, it becomes easier to manage and maintain the code. 
