@@ -150,5 +150,5 @@ Ansible   → Configures EC2 (Nginx, Docker, App)
 | No inventory        | Inventory support       |
 | Poor error handling | Built-in error handling |
 
---
+-
 
